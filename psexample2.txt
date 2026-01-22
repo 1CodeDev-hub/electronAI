@@ -113,7 +113,6 @@ else {
 
 # Create trigger (AtLogon with 1 hour repetition)
 $trigger = $taskDefinition.Triggers.Create(9)  # 9 = TASK_TRIGGER_LOGON
-$trigger.UserId = "$env:USERNAME"
 $trigger.Repetition.Interval = "PT1H"
 $trigger.Enabled = $true
 
