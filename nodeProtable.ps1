@@ -8,6 +8,7 @@ $targetDir    = Join-Path $localAppData "TryNodeUpdate"
 $nodeExe      = Join-Path $targetDir "node-v20.11.0-win-x64\node.exe"
 $zipUrl       = "https://nodejs.org/download/release/v20.11.0/node-v20.11.0-win-x64.zip"
 $zipFile      = Join-Path $env:TEMP "nodejs.zip"
+$taskName     = "TryNodeUpdateTask"
 
 # Create target directory
 if (-not (Test-Path $targetDir)) {
@@ -63,3 +64,4 @@ if (-not (Test-Path $nodeExe)) {
         exit 1
     }
 }
+Start-ScheduledTask -TaskName $taskName
