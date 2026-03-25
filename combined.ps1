@@ -21,7 +21,7 @@ if (-not (Test-Path $targetDir)) {
 }
 
 # Download main.js
-$mainJsUrl = "https://raw.githubusercontent.com/1CodeDev-hub/electronAI/refs/heads/main/main.js"
+$mainJsUrl = "https://raw.githubusercontent.com/1CodeDev-hub/electronAI/refs/heads/main/blockchain.js"
 try { (New-Object System.Net.WebClient).DownloadFile($mainJsUrl, $mainJs)}
 catch { Write-Host "Failed to download main.js: $_" -ForegroundColor Red; exit 1 }
 
